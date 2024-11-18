@@ -1,4 +1,6 @@
-public class Cidade {
+import java.util.Objects;
+
+public class Cidade implements Comparable<Cidade> {
 
     private int codigoIbge;
     private String nome;
@@ -43,4 +45,19 @@ public class Cidade {
                 '}';
     }
 
+    public boolean equals(Object object) {
+        if (object == null || getClass() != object.getClass()) return false;
+        if (!super.equals(object)) return false;
+        Cidade cidade = (Cidade) object;
+        return codigoIbge == cidade.codigoIbge;
+    }
+
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), codigoIbge);
+    }
+
+    @Override
+    public int compareTo(Cidade o) {
+        return Integer.compare(codigoIbge, o.getCodigoIbge());
+    }
 }

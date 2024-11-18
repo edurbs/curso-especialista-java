@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Principal {
 
     public static void main(String[] args) {
@@ -12,17 +14,25 @@ public class Principal {
         Cidade portoVelho = new Cidade(1100205, "Porto Velho", 548_952);
 
         // TODO Performance é mais importante (não garante a ordem das chaves)
+        //Map<Estado, Cidade> capitais = new HashMap<>();
 
         // TODO Performance é importante, mas precisa manter ordem de inserção das chaves
+        //Map<Estado, Cidade> capitais = new LinkedHashMap<>();
 
         // TODO Performance é menos importante e precisa manter a ordem natural das chaves
+        Map<Estado, Cidade> capitais = new TreeMap<>();
 
-//        capitais.put(sp, saoPaulo);
-//        capitais.put(mg, beloHorizonte);
-//        capitais.put(ce, fortaleza);
-//        capitais.put(ro, portoVelho);
+        capitais.put(sp, saoPaulo);
+        capitais.put(mg, beloHorizonte);
+        capitais.put(ce, fortaleza);
+        capitais.put(ro, portoVelho);
 
         // TODO Iteração nas entradas do mapa (chave/valor)
+        for (var capital : capitais.entrySet()){
+            System.out.printf("%s => %s%n",
+                    capital.getKey().getSigla(),
+                    capital.getValue().getNome());
+        }
     }
 
 }
