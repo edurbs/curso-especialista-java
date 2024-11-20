@@ -20,14 +20,14 @@ public class Principal {
         for (String email : emailsValidos) {
             if (!ValidadorEmail.validar(email)) {
                 throw new RuntimeException(
-                        String.format("E-mail %s é válido, mas validador retornou false", email));
+                        String.format("E-mail \"%s\" é válido, mas validador retornou false", email));
             }
         }
 
         for (String email : emailsInvalidos) {
             if (ValidadorEmail.validar(email)) {
                 throw new RuntimeException(
-                        String.format("E-mail %s é inválido, mas validador retornou true", email));
+                        String.format("E-mail \"%s\" é inválido, mas validador retornou true", email));
             }
         }
 
