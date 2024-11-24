@@ -1,5 +1,4 @@
 import com.algaworks.vendas.Cliente;
-import com.algaworks.vendas.ItemPedido;
 import com.algaworks.vendas.Pedido;
 
 import java.math.BigDecimal;
@@ -8,15 +7,14 @@ import java.util.Locale;
 
 public class Principal {
 
-    private final static NumberFormat FORMATADOR_MOEDA = NumberFormat.getCurrencyInstance(
-            new Locale("pt", "BR"));
+    private final static NumberFormat FORMATADOR_MOEDA = NumberFormat.getCurrencyInstance(Locale.of("pt", "BR"));
 
     public static void main(String[] args) {
         Cliente cliente = new Cliente("João");
         Pedido pedido = new Pedido(cliente);
 
-        ItemPedido item1 = pedido.adicionarItem("iPhone 14", 3, new BigDecimal("12000"));
-        ItemPedido item2 = pedido.adicionarItem("Apple Watch", 3, new BigDecimal("5900"));
+        Pedido.Item item1 = pedido.adicionarItem("iPhone 14", 3, new BigDecimal("12000"));
+        Pedido.Item item2 = pedido.adicionarItem("Apple Watch", 3, new BigDecimal("5900"));
 
         imprimirResumo(pedido);
 
@@ -30,11 +28,8 @@ public class Principal {
     }
 
     private static void imprimirResumo(Pedido pedido) {
-        for (ItemPedido item : pedido.getItens()) {
-            System.out.printf("%dx %s (%s) = %s%n",
-                    item.getQuantidade(), item.getDescricao(),
-                    FORMATADOR_MOEDA.format(item.getValorUnitario()),
-                    FORMATADOR_MOEDA.format(item.getValorTotal()));
+        for (Pedido.Item item : pedido.getItens()) {
+            System.out.printf("%dx %s (%s) = %s%n", item.getQuantidade(), item.getDescricao(), FORMATADOR_MOEDA.format(item.getValorUnitario()), FORMATADOR_MOEDA.format(item.getValorTotal()));
         }
 
         System.out.printf("Total: %s%n", FORMATADOR_MOEDA.format(pedido.getValorTotal()));
