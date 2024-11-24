@@ -4,7 +4,11 @@ import java.util.Comparator;
 
 public class Principal {
 
-	public record Funcionario (String nome, BigDecimal salario, boolean ativo) {}
+	public record Funcionario (String nome, BigDecimal salario, boolean ativo) {
+		public boolean isInativo() {
+			return !ativo;
+		}
+	}
 
 
 	private static Funcionario createFuncionario(String nome, String salario) {
@@ -27,7 +31,7 @@ public class Principal {
 		funcionarios.add(inativado);
 
 		// TODO remover funcionários inativos
-		funcionarios.removeIf(funcionario -> !funcionario.ativo());
+		funcionarios.removeIf(Funcionario::isInativo);
 
 		// TODO ordenar funcionários pelo valor do salário
 		funcionarios.sort(Comparator.comparing(Funcionario::salario));
