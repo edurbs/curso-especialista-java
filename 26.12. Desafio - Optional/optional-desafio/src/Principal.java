@@ -22,18 +22,11 @@ public class Principal {
     private static String obterNomeCidadeResidenciaPropria(Cliente cliente) {
         Objects.requireNonNull(cliente);
 
-        Endereco endereco = cliente.getEndereco();
-        Cidade cidade = null;
-
-        if (endereco != null && endereco.isResidenciaPropria()) {
-            cidade = endereco.getCidade();
-        }
-
-        if (cidade != null) {
-            return cidade.nome();
-        }
-
-        throw new TipoDeResidenciaInvalidaException();
+        return cliente.getEndereco()
+                .filter(Endereco::isResidenciaPropria)
+                .flatMap(Endereco::getCidade)
+                .orElseThrow(TipoDeResidenciaInvalidaException::new)
+                .nome();
     }
 
 }

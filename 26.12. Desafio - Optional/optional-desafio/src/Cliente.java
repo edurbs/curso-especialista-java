@@ -1,3 +1,5 @@
+import java.util.Optional;
+
 public class Cliente {
 
     private final String nome;
@@ -16,8 +18,8 @@ public class Cliente {
         return nome;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
+    public Optional<Endereco> getEndereco() {
+        return Optional.ofNullable(endereco);
     }
 
 }

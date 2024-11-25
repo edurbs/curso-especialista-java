@@ -1,3 +1,5 @@
+import java.util.Optional;
+
 public class Endereco {
 
     private final String logradouro;
@@ -39,8 +41,8 @@ public class Endereco {
         this.residenciaPropria = residenciaPropria;
     }
 
-    public Cidade getCidade() {
-        return cidade;
+    public Optional<Cidade> getCidade() {
+        return Optional.ofNullable(cidade);
     }
 
 }
