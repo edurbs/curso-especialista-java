@@ -1,8 +1,10 @@
 package com.algaworks.comercial;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Venda {
 
@@ -70,11 +72,9 @@ public class Venda {
     }
 
     private void calcularValorTotal() {
-        BigDecimal valorTotal = BigDecimal.ZERO;
-        for (Item item : itens) {
-            valorTotal = valorTotal.add(item.calcularValorTotal());
-        }
-        this.valorTotal = valorTotal;
+        this.valorTotal = itens.stream()
+                .map(Item::calcularValorTotal)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
     public enum Status {

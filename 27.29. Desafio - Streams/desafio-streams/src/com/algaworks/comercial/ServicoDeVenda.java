@@ -44,13 +44,10 @@ public class ServicoDeVenda {
     }
 
     private Integer gerarProximoCodigo() {
-        int maiorCodigo = 0;
-        for (Venda venda : vendas) {
-            if (venda.getCodigo() > maiorCodigo) {
-                maiorCodigo = venda.getCodigo();
-            }
-        }
-        return maiorCodigo + 1;
+        return vendas.stream()
+                .mapToInt(Venda::getCodigo)
+                .max()
+                .orElse(0)+1;
     }
 
     public List<Venda> obterTodas() {
