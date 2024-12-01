@@ -1,6 +1,12 @@
 package com.algaworks.crm;
 
-public class Endereco {
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Endereco implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = -2097277593546493191L;
 
     private String rua;
     private String numero;

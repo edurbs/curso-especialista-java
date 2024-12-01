@@ -1,8 +1,13 @@
 package com.algaworks.crm;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Cliente {
+public class Cliente implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = -5472647895850052013L;
 
     private String nome;
     private final Endereco endereco;
