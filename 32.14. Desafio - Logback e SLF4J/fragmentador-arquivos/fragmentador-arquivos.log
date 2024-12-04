@@ -1,0 +1,30 @@
+2024-12-04 18:15:58.429 INFO  c.a.a.Principal - INFO: Iniciando programa de fragmentação...
+2024-12-04 18:15:58.431 WARN  c.a.a.f.FragmentadorDeArquivo - WARN: Tamanho dos fragmentos muito pequeno. Considere aumentar para no mínimo 100kb
+2024-12-04 18:15:58.431 DEBUG c.a.a.f.FragmentadorDeArquivo - DEBUG: Fragmentação invocada para arquivo original fotos/picanha.jpg com fragmentos de até 51200 bytes
+2024-12-04 18:15:58.432 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 1
+2024-12-04 18:15:58.435 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.1
+2024-12-04 18:15:58.436 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 2
+2024-12-04 18:15:58.436 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.2
+2024-12-04 18:15:58.436 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 3
+2024-12-04 18:15:58.436 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.3
+2024-12-04 18:15:58.436 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 4
+2024-12-04 18:15:58.436 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.4
+2024-12-04 18:15:58.436 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 5
+2024-12-04 18:15:58.436 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.5
+2024-12-04 18:15:58.437 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 6
+2024-12-04 18:15:58.437 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.6
+2024-12-04 18:15:58.437 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 7
+2024-12-04 18:15:58.437 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.7
+2024-12-04 18:15:58.437 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 8
+2024-12-04 18:15:58.437 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.8
+2024-12-04 18:15:58.437 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 9
+2024-12-04 18:15:58.437 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.9
+2024-12-04 18:15:58.437 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 10
+2024-12-04 18:15:58.438 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.10
+2024-12-04 18:15:58.438 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 11
+2024-12-04 18:15:58.438 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.11
+2024-12-04 18:15:58.438 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 12
+2024-12-04 18:15:58.438 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.12
+2024-12-04 18:15:58.438 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Lendo buffer de fragmento 13
+2024-12-04 18:15:58.438 TRACE c.a.a.f.FragmentadorDeArquivo - TRACE: Escrevendo fragmento em picanha.jpg.13
+2024-12-04 18:15:58.438 INFO  c.a.a.Principal - INFO: Fragmentação concluída com sucesso!
